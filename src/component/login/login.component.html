@@ -1,0 +1,30 @@
+<div class="login-form">
+  <form [formGroup]="loginform">
+    <h1>Login</h1>
+    <div class="form-field">
+      <input
+        type="text"
+        pInputText
+        formControlName="email"
+        placeholder="Email"
+      />
+      @if(loginform.controls['email'].touched){
+      @if(loginform.controls['email'].errors?.['required']){
+      <span class="error">Required</span>
+      } }
+    </div>
+    <div class="form-field">
+      <input
+        type="text"
+        pInputText
+        formControlName="password"
+        placeholder="Password"
+      />
+      @if(loginform.controls['password'].touched){
+      @if(loginform.controls['password'].errors?.['required']){
+      <span class="error">Required</span>
+      } }
+    </div>
+    <p-button [disabled]="!loginform.valid" (click)="login()" label="Login" />
+  </form>
+</div>

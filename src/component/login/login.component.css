@@ -6,4 +6,12 @@
 }
 .form-field{
     margin-bottom: 20px;
+    position: relative;
+}
+.error{
+    color: tomato;
+    position: absolute;
+    font-size: 14px;
+    top: 45px;
+    left: 0;
 }
